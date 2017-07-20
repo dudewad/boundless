@@ -1,0 +1,74 @@
+@import './variables';
+@import './mixins';
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background: map-get($colors, paper);
+    font-family: "Fira Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", serif;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 2.2em;
+    line-height: 1.25;
+    letter-spacing: .03em;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.25em;
+    line-height: 1.4;
+    letter-spacing: .01em;
+}
+
+p, li, button {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.015em;
+
+    &.small {
+        font-size: .875em;
+        font-weight: 500;
+        line-height: 1.425;
+        letter-spacing: -0.01em;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+menu {
+    margin: 0;
+}
+
+.siteIcon {
+    font-size: 2em;
+}
+
+.caption {
+    @include accentFontFamily();
+    text-transform: uppercase;
+}

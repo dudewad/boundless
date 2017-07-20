@@ -1,0 +1,57 @@
+@import '../variables';
+@import '../mixins';
+@import '../bootstrap-custom/bootstrap-no-output';
+
+.cmp.cmp-site-header {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    header {
+        display: flex;
+        padding: 1.5em;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {
+        color: map-get($colors, white);
+
+        ul {
+            display: none;
+        }
+
+        button {
+            display: inline-block;
+            color: map-get($colors, white);
+        }
+    }
+
+    .logo {
+        width: auto;
+        height: 2em;
+    }
+
+    li {
+        display: inline-block;
+        margin-left: 4em;
+        @include accentFontFamily();
+    }
+
+    @media screen and(min-width: $screen-md-min){
+        width: auto;
+
+        nav{
+            ul {
+                display: inline-block;
+            }
+
+            button {
+                display: none;
+            }
+        }
+    }
+}

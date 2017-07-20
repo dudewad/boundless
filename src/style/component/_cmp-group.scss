@@ -1,0 +1,43 @@
+@import '../bootstrap-custom/bootstrap-no-output';
+
+$unitHeight: 17em;
+$verticalGutter: 2em;
+
+.cmp.cmp-group {
+
+    .cmp {
+        padding: 1em;
+        margin-bottom: $verticalGutter;
+    }
+
+    .cmp-content {
+        position:relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .content-main {
+        position: relative;
+        z-index: 1;
+        padding: 1em;
+    }
+
+    .cmp-1x1,
+    .cmp-2x1{
+        height: $unitHeight;
+    }
+
+    .cmp-1x2 {
+        height: $unitHeight;
+    }
+
+    .foot-note {
+        padding: 1em;
+    }
+
+    @media screen and (min-width: $screen-md-min) {
+        .cmp-1x2 {
+            height: $unitHeight * 2 + $verticalGutter;
+        }
+    }
+}

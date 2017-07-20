@@ -1,0 +1,32 @@
+@import '../variables';
+@import '../mixins';
+@import '../bootstrap-custom/bootstrap-no-output';
+
+.cmp.cmp-site-footer {
+    text-align: center;
+    margin: 4em 0 7em 0;
+
+    footer {
+        padding: 2em;
+    }
+
+    .content-main {
+        max-width: 30em;
+        padding: 1em;
+        margin: 0 auto 3em auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .cmp-search {
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    @media screen and(min-width: $screen-md-min) {
+        footer {
+            padding: 6em;
+        }
+    }
+}

@@ -1,0 +1,143 @@
+@import '../variables';
+@import '../mixins';
+
+.bg-peach {
+    background: map-get($colors, peach);
+
+    .content-main {
+        background: map-get($colors, peach);
+    }
+
+    .foot-note {
+        color: map-get($colors, white);
+    }
+
+    .accent-bar {
+        background-color: map-get($colors, white);
+    }
+}
+
+.bg-taupe {
+    background: map-get($colors, taupe);
+
+    h2 {
+        color: map-get($colors, white);
+    }
+
+    i, p {
+        color: rgba(map-get($colors, black), .5);
+    }
+
+    .content-main {
+        background: map-get($colors, taupe);
+    }
+
+    .foot-note p{
+        color: map-get($colors, white);
+    }
+
+    .accent-bar {
+        background-color: map-get($colors, white);
+    }
+}
+
+.bg-white {
+    background: map-get($colors, white);
+
+    h2 {
+        color: map-get($colors, black);
+    }
+
+    i, p {
+        color: map-get($colors, taupe);
+    }
+
+    .foot-note {
+        color: map-get($colors, moss);
+    }
+
+    .accent-bar {
+        background-color: map-get($colors, taupe);
+    }
+}
+
+.bg-black {
+    background: map-get($colors, black);
+
+    h2 {
+        color: map-get($colors, peach);
+    }
+
+    .content-main {
+        background: map-get($colors, black);
+    }
+}
+
+.bg-teal {
+    background: map-get($colors, teal);
+
+    h2 {
+        color: map-get($colors, white);
+    }
+
+    i, p {
+        color: map-get($colors, peach);
+    }
+
+    .content-main {
+        background: map-get($colors, teal);
+    }
+
+    .foot-note {
+        color: map-get($colors, peach);
+    }
+
+    .accent-bar {
+        background-color: map-get($colors, peach);
+    }
+}
+
+.bg-flowers {
+    background: url('/asset/image/bg.jpg') center no-repeat;
+}
+
+.foot-note {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    p {
+        margin: 1em 0 0 0;
+    }
+
+    .accent-bar {
+        position: relative;
+        top: -.5em;
+        float: right;
+    }
+}
+
+.bg-img-topo {
+    &.bg-black {
+        @include transparentImgBg('/asset/image/topo-peach.svg', .1);
+    }
+
+    &.bg-taupe {
+        @include transparentImgBg('/asset/image/topo-teal.svg', .3);
+    }
+
+    &.bg-teal {
+        @include transparentImgBg('/asset/image/topo-moss.svg', .2);
+    }
+}
+
+.compensate-header {
+    margin-top: 2.5em;
+}
+
+.overlap-prev {
+    //This approach fixes negative-margin float overlap issues which keeps content from coming up
+    position: relative;
+    margin-bottom: -2.5em;
+    top: -2.5em;
+}

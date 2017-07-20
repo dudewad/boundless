@@ -1,0 +1,55 @@
+@import '../bootstrap-custom/bootstrap-no-output';
+
+.cmp.cmp-hero {
+    // Need to account for bootstraps heavy-handedness to avoid negative margin resize issues
+    box-sizing: content-box;
+    text-align: center;
+    position: relative;
+    font-size: .8em;
+    overflow: hidden;
+
+    h1 {
+        margin-top: 2.25em;
+    }
+
+    p {
+        position: relative;
+        z-index: 2;
+    }
+
+    .cmp-content {
+        color: map-get($colors, white);
+        padding: 12em 0;
+        max-width: 30em;
+        margin: 0 auto;
+    }
+
+    .accent-bar {
+        display: block;
+        margin: 1.5em auto;
+        font-size: 2em;
+    }
+
+    .flower {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+
+        &.petal1 {
+            transform: translateX(-145px) translateY(-288px);
+        }
+
+        &.petal2 {
+            transform: translateX(189px) translateY(-35px);
+        }
+    }
+
+    @media screen and (min-width: $screen-md-min) {
+        font-size: 1em;
+
+        h1 {
+            margin-top: 3.25em;
+        }
+    }
+}

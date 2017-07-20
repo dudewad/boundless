@@ -1,0 +1,40 @@
+@import '../variables';
+
+.accent-bar {
+    display: block;
+    width: 1em;
+    height: 2px;
+    transform: rotate(-45deg);
+    background: map-get($colors, peach);
+
+    &.white {
+        background: map-get($colors, white);
+    }
+
+    &.peach {
+        background: map-get($colors, peach);
+    }
+
+    &.taupe{
+        background: map-get($colors, taupe);
+    }
+
+    &.moss {
+        background: map-get($colors, moss);
+    }
+}
+
+.has-ampersand {
+    position: relative;
+
+    &:before {
+        content: '&';
+        position: absolute;
+        top: 0;
+        transform: translateY(-.75em) translateX(-50%);
+        z-index: 1;
+        font-family: "Playfair Display", serif;
+        font-size: 5.65em;
+        color: map-get($colors, white);
+    }
+}
