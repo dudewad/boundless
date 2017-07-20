@@ -1,0 +1,43 @@
+{
+  "name": "Boundless",
+  "version": "1.0.0",
+  "description": "Boundless Demo Project",
+  "main": "index.js",
+  "directories": {
+    "asset": "/asset/",
+    "data": "/data/",
+    "doc": "./docs/",
+    "distRootSrcArchive": "./dist/_src/",
+    "distRootProd": "./dist/prod/",
+    "font": "/asset/font/",
+    "image": "/font/",
+    "grunt": {
+      "aliasCfg": "./grunt/aliasCfg/",
+      "taskCfg": "./grunt/taskCfg/"
+    },
+    "script": "/script/",
+    "srcRoot": "./src/",
+    "style": "/style/"
+  },
+  "livereload": {
+    "host": "*",
+    "port": 1357
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Layton Miller",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-compress": "^1.4.3",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-webfont": "^1.6.0",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}
